@@ -15,23 +15,37 @@
       <h1>Prework Study Guide</h1>
       <h2>✨ Open the Console to See What's Happening ✨</h2>
       <img 
-      src="./assets/bowtie-cat.png" 
-      alt="Profile image of cat wearing a bow tie." 
+      src="./assets/Kobold_White.png" 
+      alt="Pixel image of a white kobold." 
       />
+
+    <!-- Previous image link:
+      src="./assets/bowtie-cat.png"
+      alt="Profile image of cat wearing a bow tie." 
+    -->
+
     </header>
 
     <main>
 
       <section class="card" id="html-section">
         <h2>HTML</h2>
+
+        <h3>&lthead&gt</h3>
+
         <ul>
           <li>The head element contains information about the webpage itself.</li>
             <ul>
-              <li>This includes metadata and associated tags, as well as details important for Search-Enging Optimization (SEO).</li>
+              <li>This includes metadata and associated tags, as well as details important for Search-Engine Optimization (SEO).</li>
               <li>The head element is not visible to the end-user.</li>
-              <li>When using an external CSS style sheet, the link must be placed in the 'head' element.</li>
+              <li>When using an external CSS style sheet, the link must be placed in the &lthead&gt element.</li>
             </ul>
-              <br>
+        </ul>
+        <br>
+
+        <h3>&ltbody&gt</h3>
+
+        <ul>
           <li>The body element represents the visible content shown to the user, including such items as:</li>
             <ul>
               <li>Headers</li>
@@ -41,61 +55,207 @@
             </ul>
         </ul>
         <br>
+
+        <h3> &lt, &gt, and &amp  </h3>
+
+        <ul>
+          <li>There are some text items that require special characters to write in HTML code:</li>
+          <ul>
+            <li>The <em>"less than"</em> character (&lt) is written as <strong>'&amplt'</strong></li>
+            <li>The <em>"greater than"</em> character (&gt) is written as <strong>'&ampgt'</strong></li>
+            <li>The <em>ampersand</em> character (&amp) is written as <strong>'&ampamp'</strong></li>
+          </ul>
+          <li>A full list of similar commands can be found <a href="https://www.freeformatter.com/html-entities.html">here</a></li>
+        </ul>
+        <br>
       </section>
 
       <section class="card" id="css-section">
         <h2>CSS</h2>
+        
+        <h3>Margins and Padding</h3>
         <ul>
-          <li>A margin indicates how much space we want around the outside of an element.</li>
-          <li>A padding indicates how much space we want around the content inside an element.</li>
+          <li>A margin indicates how much space we want around the <em>outside</em> of an element.</li>
+          <li>A padding indicates how much space we want around the content <em>inside</em> an element.</li>
           <li>Number values for both margin and padding address the top/bottom of the element first, followed by the left/right of the element.</li>
           <ul>
             <li>E.g. Adding the code "padding: 0 5px" to your style sheet will result in the left and right sides of the element have a 5 pixel internal buffer, while the top and bottom edges have no buffer at all.</li>
           </ul>
         </ul>
+
+        <h3>Custom Class Elements</h3>
+        <ul>
+          <li>A custom class element can be added to the style sheet by using the .[class] element.</li>
+          <li>The cards on this webpage use a custom element called ".card" for example.</li>
+          <li>By applying the custom class to a section of the HTML and identifying it as a "css-section," HTML kows to use the formatting data in the custom class for the whole section.</li>
+        </ul>
+
         <br>
       </section>
 
       <section class="card" id="git-section">
         <h2>Git</h2>
-        <ul>
-          <li>Basic Git Commands</li>
+        <h3>Basic Git Commands</h3>
             <ul>
               <li>git -h: Brings up the help screen for git</li>
               <li>git status: Checks the branch you are currently working in and identifies any untracked files.</li>
-              <li>git branch: Shows all available branches.</li>
-              <li>git branch [branchname]: Creates a new branch without changing your current branch</li>
-              <li>git branch -d [branchname]: Deletes an existing branch.</li>
-              <li>git checkout [branchname]: Allows you to checkout the specific existing branch</li>
-              <li>git checkout -b 'branchname': Creates a new branch off the current branch and checks it out.</li>
+              <li>git branch: Shows all available branches on your local machine.</li>
+              <li>git branch <i>branchName</i>: Creates a new local branch without changing your current branch</li>
+              <li>git branch -d <i>branchName</i>: Deletes an existing branch.</li>
+              <li>git checkout <i>branchName</i>: Allows you to checkout the specific existing branch</li>
+              <li>git checkout -b <i>'branchName'</i>: Creates a new branch off the current branch and checks it out.</li>
             </ul>
             <br>
-          <li>Pushing changes to Github</li>
+          <h3>Pushing changes to Github</h3>
           <ul>
-            <li>Add more later!</li>
+            <li>git add -A: Stages <i>all</i> files to commit.</li>
+            <li>git commit -m <i>"commit message here"</i>: Commits changes to GitHub with comments.</li>
+            <li>git pull origin main: Syncs main branch with GitHub to ensure files are updated before pushing changes.</li>
+            <li>git push origin <i>branchName</i>: pushes updated commits to the specified branch.</li>
+          </ul>
+
+                <p class="note"> 
+                  NOTE: Additional considerations may need to be made regarding the above code. 
+                </p>         
+
+          <br>
+          <h3>Pulling a Branch from GitHub that isn't on the Local Machine</h3>
+          <ul>
+            <li>git checkout main: Ensures that you are working on the main branch to start</li>
+            <li>git status: Checks the status of your code to make sure the master (or main) branch is up to date</li>
+            <li>git pull origin main: Pulls the main branch to integrate any updates (if necessary).</li>
+            <li>git fetch: Updates the list of branches on the working machine to match the branches in the remote repository.</li>
+            <li>git branch -a: Shows all local <i>and remote</i> branches</li>
+              <ul>
+                <li>This code allows us to see all local and remote branches.</li>
+                <li>git branch -r: Shows only the remote branches.</li>
+                <li>git branch: Shows only the available local branches.</li>
+              </ul>
+            <li>git checkout <i>nameOfRemoteBranch</i>: Include all text after "origin" in the branch results to connect to the remote branch.</li>
+            <li>git pull: Updates your current branch files to match those from the remote repository.</li>
           </ul>
           <br>
-          <li>Pulling changes from Github</li>
-          <ul>
-            <li>Add more later!</li>
-          </ul>
-          <br>
-          <li>Git Cheat-Sheet</li>
+          <h3>Git Cheat-Sheet</h3>
           <ul>
             <li><a href="https://education.github.com/git-cheat-sheet-education.pdf">Click Here</a></li>
           </ul>
-        </ul>
+        
         <br>
       </section>
 
       <section class="card" id="javascript-section">
         <h2>JavaScript</h2>
+        <h3>Basic Notes</h3>
         <ul>
           <li>JavaScript is used for all of the interactive parts of a website.</li>
           <li>When connecting a .js file to your webpage, the script link must be placed at the end of the body code, similar to how .css files must be linked at the end of the head code.</li>
           <li>A variable is a named container that allows us to store data in our code. It can be a static numeric value, a string of text characters, or even an array of different values!</li>
-          <li>Control flow is the order in which a computer executes code in a script - in JavaScript, the order goed from top to bottom!</li>
+          <li>Control flow is the order in which a computer executes code in a script - in JavaScript, the order goes from top to bottom!</li>
         </ul>
+        <br>
+
+        <h3>Variables, Objects, Operators, and Comments</h3>
+        <ul>
+          <li>Variables:</li>
+          <ul>
+            <li>Variables are containers that store values.</li>
+            <li>Variables must be set by indicating a name and a value</li>
+            <li>There are three different ways to set variables:</li>
+            <ul>
+              <li><b>var:</b> var myFirstVariable = 'firstName ';</li>
+              <li><b>const:</b> const mySecondVariable = 'lastName';</li>
+              <li><b>let:</b> let myCombinedVariables = x + y;</li>
+            </ul>
+            <li>When should I use each variable?</li>
+            <ul>
+              <li><b>var:</b> For older browsers. JavaScript did not use <i>let</i> or <i>const</i> until 2015.</li>
+              <li><b>const:</b> For static variables in newer browsers. As a rule of thumb, <i>const</i> should work for most variables</li>
+              <li><b>let:</b> For variables where the value is expected to change. Let works well for relational expressions using existing declared variables (e.g. let z = x + y) </li>
+            </ul>
+          </ul>
+          <li>Objects:</li>
+          <ul>
+            <li>Everything in JS is an object and can be stored in a variable</li>
+          </ul>
+          <li>Operators</li>
+          <ul>
+            <li>An operator is a mathematical symbol that produces a result based on two values.</li>
+            <li>You can find more information on operators <a href="https://developer.mozilla.org/en-US/docs/Glossary/Operator">here</a></li>
+          </ul>
+
+          <li>Comments</li>
+          <ul>
+            <li>// Two forward slashes will indicate that an entire line is a comment.</li>
+            <li>/* Anything between the two asterisks, including multiple lines of code, will be indicated as a comment */</li>
+          </ul>
+        
+        </ul>
+        <br>
+
+        <h3>Dynamic Variables</h3>
+        <ul>
+          <li>When defining a variable, JavaScript will determine the type dynamically based on the value you set.</li>
+          <ul>
+            <li>var foo = 42; <i>//foo is now a number</i></li>
+            <li>const foo = 'bar' <i>//foo is now a string</i></li>
+            <li>let foo = true <i>//foo is now a boolean</i></li>
+          </ul>
+          <p class="note">Note: Once a variable is declared with <i>let,</i> it cannot be <i>redeclared.</i></p>
+        </ul>
+        <br>
+
+        <h3>Functions</h3>
+        <ul>
+          <li>Functions are a way of packaging functionality that you wish to reuse.</li>
+          <li>Functions allow you to perform specific coded actions when called, allowing you to create dynamic effects with smaller amounts of code.</li>
+        </ul>
+        <br>
+
+        <h3>If Statements</h3>
+        <ul>
+          <li>Similar to other coding languages, the If statement in JavaScript checks for a specific condition, and executes code based on whether or not the results match another indicated value.</li>
+          <li>This is known as conditional logic.</li>
+          <li>Example Syntax:</li>
+          <ul>
+            <li>If (x + 1 == 4) {<i>This code will execute</i>}</li>
+            <li>Else If (x + 1 == 5) {<i>This second code will execute</i>}</li>
+            <li>Else {<i>This alt code will execute</i>}</li>
+          </ul>
+        </ul>
+        <br>
+
+        <h3>Arrays</h3>
+        <ul>
+          <li>Arrays are variables that store multiple values.</li>
+          <li>An array can be thought of as being like a spreadsheet, where each box on the spreadsheet indicates an index number value</li>
+          <li>Index values in arrays start at 0, and then move up by 1 for each value present in the array.</li>
+          <li>Example Syntax:</li>
+          <ul>
+            <li>var shapes = ['triangle', 'square', 'pentagon', 'hexagon']</li>
+            <li>The above variable <i>shapes</i> is an array. The strings, from left to right, indicate index values from 0 to 3.</li>
+            <li>To use this variable, it needs to be called with an index value. (e.g. <i>shapes[0]</i>)</li>
+          </ul>
+        </ul>
+        <p class="note">Note: You can use a previously defined function as an array's value, so long as the function's result is an index number. The random subject selector in the console uses this kind of logic to generate a new result on a page refresh!</p>
+        <br>
+        
+        <h3>For Loops</h3>
+        <ul>
+          <li>A For loop uses predictable patterns of indices to perform a task on all items in an array: this is also known as recursion</li>
+          <li>For loops all contain the following three parts:</li>
+          <ul>
+            <li>A starting point.</li>
+            <li>A break condition.</li>
+            <li>An iterative value</li>
+          </ul>
+          <li>Example Syntax:</li>
+          <ul>
+            <li>for (var x = 0; x &lt 4; x++) {<i>This code will execute.</i>}</li>
+            <li>The above code indicates that starting at index 0, so long as the x variable is less than 4, the code will be executed and the x value will be increased by 1.</li>
+          </ul>
+        </ul>
+
+
         <br>
       </section>
 
